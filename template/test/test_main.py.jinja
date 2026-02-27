@@ -1,0 +1,24 @@
+"""Tests for the main module."""
+
+import pytest
+
+from {{ project_name }}.main import greet
+
+
+def test_greet():
+    """Test the greet function."""
+    result = greet("Alice")
+    assert result == "Hello, Alice!"
+    assert isinstance(result, str)
+
+
+def test_greet_empty_string():
+    """Test greet with an empty string."""
+    result = greet("")
+    assert result == "Hello, !"
+
+
+def test_greet_with_special_characters():
+    """Test greet with special characters."""
+    result = greet("José")
+    assert result == "Hello, José!"

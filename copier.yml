@@ -1,0 +1,43 @@
+# Copier template configuration
+_templates_suffix: .jinja
+_subdirectory: template
+
+# Directory name transformations
+_answers_file: .copier-answers.yml
+
+# Tasks to run after generating the project
+_tasks:
+  # Rename the __project_name__ directory to the actual project name
+  - "mv src/__project_name__ src/{{ project_name }}"
+
+# Questions to ask the user
+project_name:
+  type: str
+  help: What is your project name?
+  default: my_project
+  validator: "{% if not project_name.replace('_', '').isalnum() %}Project name must be alphanumeric (underscores allowed){% endif %}"
+
+project_description:
+  type: str
+  help: What is your project description?
+  default: A simple Python project
+
+author_name:
+  type: str
+  help: What is your name?
+  default: Your Name
+
+author_email:
+  type: str
+  help: What is your email?
+  default: your.email@example.com
+
+python_version:
+  type: str
+  help: What Python version do you want to use?
+  default: "3.11"
+  choices:
+    - "3.9"
+    - "3.10"
+    - "3.11"
+    - "3.12"

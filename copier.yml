@@ -5,6 +5,11 @@ _subdirectory: template
 # Directory name transformations
 _answers_file: .copier-answers.yml
 
+# Tasks to run after generating the project
+_tasks:
+  # Rename the __project_name__ directory to the actual project name
+  - "mv src/__project_name__ src/{{ project_name }}"
+
 # Questions to ask the user
 project_name:
   type: str

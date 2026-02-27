@@ -1,0 +1,41 @@
+# {{ project_name }}
+
+{{ project_description }}
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+## Usage
+
+```python
+from {{ project_name }}.main import greet
+
+greet("World")
+```
+
+## Testing
+
+```bash
+pytest
+```
+
+## Docker
+
+Build the Docker image:
+
+```bash
+docker build -t {{ project_name }} .
+```
+
+Run the Docker container:
+
+```bash
+docker run {{ project_name }}
+```
+
+## Author
+
+{{ author_name }} ({{ author_email }})

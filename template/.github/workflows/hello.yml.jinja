@@ -1,0 +1,16 @@
+name: Hello {{ project_name }}
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print hello message
+        run: echo "hello {{ project_name }}"

@@ -1,0 +1,1 @@
+# copier_template_example

@@ -5,6 +5,11 @@ _subdirectory: template
 # Directory name transformations
 _answers_file: .copier-answers.yml
 
+_skip_if_exists:
+  - "src/**"
+  - "test/**"
+  - "*.py"
+
 # Questions to ask the user
 project_name:
   type: str

@@ -1,5 +1,6 @@
 # Copier template configuration
 _templates_suffix: .jinja
+_subdirectory: template
 
 # Directory name transformations
 _answers_file: .copier-answers.yml
